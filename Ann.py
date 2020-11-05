@@ -156,6 +156,9 @@ class AI_Frame(Frame):
             self.cells.append(row)
 
     def run(self, input_array: 'np.ndarray') -> None:
+        # First 4 are inputs [1, 1, 1, 1]
+        # Next to last is your bias node
+        # Last is your expected output
         training_set = np.array([[-1, -1, 1, -1, 1, 1],
                                  [-1, 1, -1, -1, 1, 1],
                                  [1, -1, -1, -1, 1, 1],
